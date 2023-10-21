@@ -1,0 +1,13 @@
+name: srlceos01
+
+topology:
+  nodes:
+    srl:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+    ceos:
+      kind: linux
+      image: alpine:latest
+
+  links:
+    - endpoints: ["srl:e1-1", "ceos:eth1"]
